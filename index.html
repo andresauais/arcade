@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="margin: -10px;">
+<head>
+    <meta charset="utf-8">
+    <title>Connect Four</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="start">
+        <h1>WELCOME TO AN ARCADE</h1>
+        <input type="text" placeholder="Username" id="usernameInput">
+        <button id="goToArcade">Go to Arcade</button>
+    </section>
+    <section id="arcade">
+        <aside class="nav">
+            <button id="scoreboardBtn">Scoreboard</button>
+            <h3 id="username">Username</h3>
+        </aside>
+        <div id="gamesContainer">
+            <div id="connectFourButton">ConnectFour</div>
+            <div id="whackAMoleButton">Whack A Mole</div>
+            <div id="drawButton">Draw</div>
+            <div id="memeButton">Meme Generator</div>
+        </div>
+        <div id="gamingArea">
+
+        </div>
+    </section>
+<script src="js/main.js"></script>
+<script src="js/connectFour.js"></script>
+</body>
+</html>

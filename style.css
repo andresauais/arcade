@@ -4,6 +4,7 @@ body{
     color: #8a00ff;
     max-width: 600px;
     max-height: 667px;
+    margin: auto;
 }
 #arcade{
     display: none;
@@ -19,7 +20,7 @@ body{
     justify-content: space-between;
     margin-top: 0px;
     background-color: rgba(0,0,0);
-    padding: 10% 2% 10% 2%;
+    padding: 5% 2% 5% 2%;
 }
 button{
     outline: none;
@@ -32,11 +33,29 @@ button{
 
 #gamesContainer{
     background-color: #c95cd1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 600px;
 }
 #connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
     border: 10px solid black;
     background-color: #ffc438;
+    margin-right: 10px;
     cursor: pointer;
+}
+
+#connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 200px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 #connectFourButton{
@@ -97,14 +116,14 @@ h1{
     font-family: 'Press Start 2P', cursive;
 }
 
-#connectFourContainer, #whackContainer{
+#connectFourContainer, #whackContainer, #memeContainer{
     background-color: #ffc438;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 700px;
 }
-#connectFourContainer > button, #whackContainer > button, #playAgainBtn{
+#connectFourContainer > button, #whackContainer > button, #playAgainBtn, #memeContainer > button{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
@@ -138,6 +157,17 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+
+/*Meme grid*/
+#memeGrid{
+    margin-top: 20px;
+    width: 350px;
+    height: 350px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
 @media only screen and (max-width: 480px) {
     #start{
         text-align: center;
@@ -157,6 +187,7 @@ h1{
         margin-bottom: 10%;
         font-size: 50px;
     }
+
     #usernameInput{
         outline: none;
         border: none;
@@ -177,7 +208,6 @@ h1{
     }
     #gamesContainer{
         display: flex;
-        flex-direction: column;
         height: 600px;
         width: 100%;
         align-items: center;
@@ -188,7 +218,7 @@ h1{
         align-items: center;
         justify-content: center;
         width: 250px;
-        height: 100%;
+        height: 100px;
         margin-top: 5px;
         margin-bottom: 5px;
         text-align: center;

@@ -111,7 +111,7 @@ document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
     finishBtn.addEventListener("click", ()=>{
         whackContainer.remove();
         gamesContainer.style.display = "flex";
-        gamesContainer.style.flexDirection = "column";
+        /*gamesContainer.style.flexDirection = "column";*/
         clearTimeout(timeId);
     });
     

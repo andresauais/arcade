@@ -113,7 +113,7 @@ finishBtn.innerHTML = "Finish Game";
 finishBtn.addEventListener("click", ()=>{
     connectFourContainer.remove();
     gamesContainer.style.display = "flex";
-    gamesContainer.style.flexDirection = "column";
+    /*gamesContainer.style.flexDirection = "column";*/
 });
 connectFourContainer.append(finishBtn);
 });

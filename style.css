@@ -2,7 +2,8 @@
 body{
     font-family: 'Press Start 2P', cursive;
     color: #8a00ff;
-    height: 700px;
+    max-width: 600px;
+    max-height: 667px;
 }
 #arcade{
     display: none;
@@ -11,7 +12,7 @@ body{
     margin-top: -100px;
     text-align: center;
     background-color: #ffc438;
-    height: 700px;
+    height: 667px;
 }
 .nav{
     display: flex;
@@ -35,6 +36,7 @@ button{
 #connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
     border: 10px solid black;
     background-color: #ffc438;
+    cursor: pointer;
 }
 
 #connectFourButton{
@@ -95,20 +97,46 @@ h1{
     font-family: 'Press Start 2P', cursive;
 }
 
-#connectFourContainer{
+#connectFourContainer, #whackContainer{
     background-color: #ffc438;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 700px;
 }
-#connectFourContainer > button{
+#connectFourContainer > button, #whackContainer > button, #playAgainBtn{
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
     width: 90%;
     font-size: 28px;
     cursor: pointer;
+}
+
+/*Whack a mole css*/
+.square{
+    width: 100px;
+    height: 100px;
+    border: 2.5px solid black;
+}
+.gridWhack{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 315px;
+    height: 315px;
+    border: 1px solid black;
+}
+.mole{
+    background-image: url("assets/mole.jpg");
+    background-size: cover;
+}
+#playAgain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 @media only screen and (max-width: 480px) {
     #start{
@@ -117,6 +145,9 @@ h1{
         margin-right: -10px;
         margin-left: -10px;
         font-size: 40px;
+    }
+    .nav{
+        padding: 2% 2% 2% 2%;
     }
     body{
         max-width: 480px;
@@ -133,9 +164,14 @@ h1{
         margin-bottom: 10%;
         font-size: 28px;
         text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     #goToArcade{
         width: 95%;
+        margin-left: 2.5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
         font-size: 28px;
         cursor: pointer;
     }
@@ -174,7 +210,10 @@ h1{
         height: 40px;
         width: 40px;
     }
-    
+    .square{
+        width: 100px;
+        height: 100px;
+    }
     .player-one {
         background-color: red;
         border-radius: 20px;

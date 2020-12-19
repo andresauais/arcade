@@ -111,7 +111,7 @@ squares.forEach(square => square.addEventListener('click', checkBoard))
 var finishBtn = document.createElement("button");
 finishBtn.innerHTML = "Finish Game";
 finishBtn.addEventListener("click", ()=>{
-    connectFourContainer.style.display = "none"
+    connectFourContainer.remove();
     gamesContainer.style.display = "flex";
     gamesContainer.style.flexDirection = "column";
 });

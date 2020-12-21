@@ -10,7 +10,6 @@ body{
     display: none;
 }
 #start{
-    margin-top: -100px;
     text-align: center;
     background-color: #ffc438;
     height: 100vh;
@@ -20,7 +19,7 @@ body{
     justify-content: space-between;
     margin-top: 0px;
     background-color: rgba(0,0,0);
-    padding: 5% 2% 5% 2%;
+    padding: 2% 2% 2% 2%;
 }
 button{
     outline: none;
@@ -88,7 +87,6 @@ button{
 }
 #start{
     text-align: center;
-    margin-top: 8%;
     font-size: 50px;
     display: flex;
     flex-direction: column;

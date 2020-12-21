@@ -1,5 +1,6 @@
 var mainArr = JSON.parse(localStorage.getItem("arr"));
 document.getElementById("spaceButton").addEventListener("click", function spaceStart(){
+    document.getElementById("scoreboardBtn").disabled = true;
     disappearGamesContainer();
     window.addEventListener('keydown', function(e) {
         if(e.keyCode == 32 && e.target == document.body) {
@@ -28,6 +29,7 @@ document.getElementById("spaceButton").addEventListener("click", function spaceS
     finishBtn.addEventListener("click", ()=>{
         spaceContainer.remove();
         gamesContainer.style.display = "flex";
+        document.getElementById("scoreboardBtn").disabled = false;
         /*gamesContainer.style.flexDirection = "column";*/
     });
     spaceContainer.append(finishBtn);

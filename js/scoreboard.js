@@ -1,7 +1,7 @@
 var mainArr = JSON.parse(localStorage.getItem("arr"));
 document.getElementById("scoreboardBtn").addEventListener("click", ()=>{
     disappearGamesContainer();
-
+    document.getElementById("scoreboardBtn").disabled = true;
     var scoreboardContainer = document.createElement("div");
     scoreboardContainer.setAttribute("id", "scoreboardContainer");
     
@@ -39,6 +39,7 @@ document.getElementById("scoreboardBtn").addEventListener("click", ()=>{
         scoreboardContainer.remove();
         gamesContainer.style.display = "flex";
         /*gamesContainer.style.flexDirection = "column";*/
+        document.getElementById("scoreboardBtn").disabled = false;
     });
 
     scoreboardContainer.append(backBtn);

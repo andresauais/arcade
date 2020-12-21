@@ -5,8 +5,10 @@ var arcade = document.getElementById("arcade");
 var usernameInput = document.getElementById("usernameInput");
 
 goToArcadeBtn.addEventListener("click", ()=>{
-    document.getElementById("start").style.display = "none";
-    arcade.style.display = "block";
+    if(usernameInput.value != "" && usernameInput.value != undefined){
+        document.getElementById("start").style.display = "none";
+        arcade.style.display = "block";
+    }
 })
 
 function disappearGamesContainer(){

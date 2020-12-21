@@ -1,5 +1,6 @@
 document.getElementById("memeButton").addEventListener("click", ()=>{
     disappearGamesContainer();
+    document.getElementById("scoreboardBtn").disabled = true;
     memeArr = [
         "url('https://s3media.247sports.com/Uploads/Assets/373/748/9748373.PNG')",
         "url('https://img.wattpad.com/27d988995f29719dbc177fa61b7a36a6698cd264/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f776e7059444f6f6e66726a3670413d3d2d3730323335333132342e313538633632356564316434326431643737373339313736383432372e6a7067?s=fit&w=720&h=720')",
@@ -32,6 +33,7 @@ document.getElementById("memeButton").addEventListener("click", ()=>{
     backBtn.addEventListener("click", ()=>{
         memeContainer.remove();
         gamesContainer.style.display = "flex";
+        document.getElementById("scoreboardBtn").disabled = false;
         /*gamesContainer.style.flexDirection = "column";*/
     });
 

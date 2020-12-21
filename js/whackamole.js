@@ -1,5 +1,6 @@
 var mainArr = JSON.parse(localStorage.getItem("arr"));
 document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
+    document.getElementById("scoreboardBtn").disabled = true;
     disappearGamesContainer();
 
     var whackContainer = document.createElement("div");
@@ -122,6 +123,7 @@ document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
     finishBtn.addEventListener("click", ()=>{
         whackContainer.remove();
         gamesContainer.style.display = "flex";
+        document.getElementById("scoreboardBtn").disabled = false;
         /*gamesContainer.style.flexDirection = "column";*/
         clearTimeout(timeId);
     });

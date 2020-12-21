@@ -1,7 +1,7 @@
 var gamingArea = document.getElementById("gamingArea");
 
 document.getElementById("connectFourButton").addEventListener("click", ()=>{
-
+document.getElementById("scoreboardBtn").disabled = true;
 disappearGamesContainer();
 
 var connectFourContainer = document.createElement("div");
@@ -113,6 +113,7 @@ finishBtn.innerHTML = "Finish Game";
 finishBtn.addEventListener("click", ()=>{
     connectFourContainer.remove();
     gamesContainer.style.display = "flex";
+    document.getElementById("scoreboardBtn").disabled = false;
     /*gamesContainer.style.flexDirection = "column";*/
 });
 connectFourContainer.append(finishBtn);

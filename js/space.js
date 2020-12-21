@@ -1,3 +1,4 @@
+var mainArr = JSON.parse(localStorage.getItem("arr"));
 document.getElementById("spaceButton").addEventListener("click", function spaceStart(){
     disappearGamesContainer();
     window.addEventListener('keydown', function(e) {
@@ -105,6 +106,15 @@ document.getElementById("spaceButton").addEventListener("click", function spaceS
             squares[currentShooterIndex].classList.add('boom');
             clearInterval(invaderId);
             spaceGrid.remove();
+            mainArr.forEach(element =>{
+                console.log(element.name);
+                if (element.name == document.getElementById("username").innerText){
+                    if(element.space < result){
+                        element.space = result;
+                    }
+                }
+            });
+            localStorage.setItem("arr", JSON.stringify(mainArr));
             spaceContainer.append(playAgainBtn);
         }
 
@@ -121,6 +131,14 @@ document.getElementById("spaceButton").addEventListener("click", function spaceS
         if(alienInvadersTakenDown.length === alienInvaders.length){
             resultDisplay.textContent = 'You Win';
             spaceGrid.remove();
+            mainArr.forEach(element =>{
+                console.log(element.name);
+                if (element.name == document.getElementById("username").innerText){
+                    if(element.space < result){
+                        element.space = result;
+                    }
+                }
+            });
             spaceContainer.append(playAgainBtn);
         }
 

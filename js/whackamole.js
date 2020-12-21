@@ -1,3 +1,4 @@
+var mainArr = JSON.parse(localStorage.getItem("arr"));
 document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
     disappearGamesContainer();
 
@@ -31,6 +32,7 @@ document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
     playAgainBtn.innerHTML = "Play Again?";
     playAgainBtn.addEventListener("click", ()=>{
         playAgain.remove();
+        hitPosition = "";
         whackContainer.insertBefore(gridWhack, finishBtn);
         document.getElementById("timeLeft").innerHTML = "10";
         score.innerHTML = 0;
@@ -98,9 +100,18 @@ document.getElementById("whackAMoleButton").addEventListener("click", ()=> {
         if(currentTime === 0){
             clearInterval(timeId);
             gridWhack.remove();
+            console.log(mainArr);
+            mainArr.forEach(element =>{
+                console.log(element.name);
+                if (element.name == document.getElementById("username").innerText){
+                    if(element.whack < result){
+                        element.whack = result;
+                    }
+                }
+            });
+            localStorage.setItem("arr", JSON.stringify(mainArr));
             currentTime = 10;
             whackContainer.insertBefore(playAgain, finishBtn);
-
         }
     }
 

@@ -41,9 +41,5 @@ document.getElementById("memeButton").addEventListener("click", ()=>{
     function getMeme() {
         let randomNumber = Math.floor(Math.random() * (memeArr.length));
         memeGrid.style.backgroundImage = memeArr[randomNumber];
-        
     }
-    
-    
-    
 });

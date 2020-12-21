@@ -2,7 +2,7 @@ var gamingArea = document.getElementById("gamingArea");
 
 document.getElementById("connectFourButton").addEventListener("click", ()=>{
 
-disappearGamesContainer() ;
+disappearGamesContainer();
 
 var connectFourContainer = document.createElement("div");
 connectFourContainer.setAttribute("id", "connectFourContainer");

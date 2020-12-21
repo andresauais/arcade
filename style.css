@@ -3,7 +3,7 @@ body{
     font-family: 'Press Start 2P', cursive;
     color: #8a00ff;
     max-width: 600px;
-    max-height: 667px;
+    max-height: 100vh;
     margin: auto;
 }
 #arcade{
@@ -13,7 +13,7 @@ body{
     margin-top: -100px;
     text-align: center;
     background-color: #ffc438;
-    height: 667px;
+    height: 100vh;
 }
 .nav{
     display: flex;
@@ -37,16 +37,16 @@ button{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    height: 600px;
+    height: 100vh;
 }
-#connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
+#connectFourButton, #whackAMoleButton, #spaceButton, #memeButton{
     border: 10px solid black;
     background-color: #ffc438;
     margin-right: 10px;
     cursor: pointer;
 }
 
-#connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
+#connectFourButton, #whackAMoleButton, #spaceButton, #memeButton{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -116,16 +116,16 @@ h1{
     font-family: 'Press Start 2P', cursive;
 }
 
-#connectFourContainer, #whackContainer, #memeContainer{
+#connectFourContainer, #whackContainer, #memeContainer, #spaceContainer{
     background-color: #ffc438;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 700px;
+    height: 667px;
 }
-#connectFourContainer > button, #whackContainer > button, #playAgainBtn, #memeContainer > button{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#connectFourContainer > button, #whackContainer > button, #playAgainBtn, #memeContainer > button, #spaceContainer > button{
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px;
     width: 90%;
     font-size: 28px;
@@ -168,6 +168,38 @@ h1{
     background-position-x: center;
     background-position-y: center;
 }
+
+/*space canvas*/
+#spaceGrid {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px;
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+#spaceGrid div {
+    width: 20px;
+    height: 20px;
+}
+
+.shooter {
+    background-color: blue;
+}
+
+.invader {
+    background-color: purple;
+    border-radius: 10px;
+}
+
+.boom {
+    background-color: red;
+}
+
+.laser {
+    background-color: orange;
+}
 @media only screen and (max-width: 480px) {
     #start{
         text-align: center;
@@ -208,19 +240,19 @@ h1{
     }
     #gamesContainer{
         display: flex;
-        height: 600px;
+        height: 92vh;
         width: 100%;
         align-items: center;
-        
+        justify-content: center;
     }
-    #connectFourButton, #whackAMoleButton, #drawButton, #memeButton{
+    #connectFourButton, #whackAMoleButton, #spaceButton, #memeButton{
+        margin: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 250px;
         height: 100px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 2px;
         text-align: center;
     }
     #gammingArea{
